@@ -2,6 +2,8 @@
  *
  */
 
+const httpsRegex = /(https?:\/\/[^\s]+)/gi;
+
 function escapeHtml(unsafe) {
     // from https://stackoverflow.com/a/6234804
     return unsafe
@@ -13,7 +15,7 @@ function escapeHtml(unsafe) {
  }
 
 function isLink(text) {
-    return text.match("/(https?:\/\/[^\s]+)/gi") != null;
+    return text.match(httpsRegex) != null;
 }
 
 function getQueries() {
