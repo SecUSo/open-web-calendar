@@ -18,12 +18,12 @@ from convert_to_dhtmlx import ConvertToDhtmlx
 from convert_to_ics import ConvertToICS
 
 # configuration
-DEBUG = os.environ.get("APP_DEBUG", "true").lower() == "true"
+DEBUG = os.environ.get("APP_DEBUG", "false").lower() == "true"
 PORT = int(os.environ.get("PORT", "5000"))
 CACHE_REQUESTED_URLS_FOR_SECONDS = int(os.environ.get("CACHE_REQUESTED_URLS_FOR_SECONDS", 600))
 
 # constants
-HERE = os.path.dirname(__name__) or "."
+HERE = os.path.dirname(__name__) or "/var/www/web-calendar"
 DEFAULT_SPECIFICATION_PATH = os.path.join(HERE, "default_specification.yml")
 TEMPLATE_FOLDER_NAME = "templates"
 TEMPLATE_FOLDER = os.path.join(HERE, TEMPLATE_FOLDER_NAME)
