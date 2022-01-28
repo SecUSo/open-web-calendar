@@ -12,6 +12,10 @@ function escapeHtml(unsafe) {
          .replace(/'/g, "&#039;");
  }
 
+function isLink(text) {
+    return text.match("/(https?:\/\/[^\s]+)/gi") != null;
+}
+
 function getQueries() {
     // from http://stackoverflow.com/a/1099670/1320237
     var qs = document.location.search;
@@ -60,6 +64,7 @@ var template = {
         }
         var text = event.location || "🗺";
         var geoUrl = event.location;
+        
         /*
         if (event.geo) {
             geoUrl = "https://www.openstreetmap.org/?mlon=" + event.geo.lon + "&mlat=" + event.geo.lat + "&#map=15/" + event.geo.lat + "/" + event.geo.lon;
@@ -67,7 +72,12 @@ var template = {
             geoUrl = OSM_URL + encodeURIComponent(event.location);
         }
         */
-        return makeLink(geoUrl, text);
+        
+        if(isLink(geoUrl)) {
+            return makeLink(geoUrl, text);
+        } else {
+            return text;
+        }
     },
     "debug": function(event) {
         return "<pre class='debug' style='display:none'>" +
