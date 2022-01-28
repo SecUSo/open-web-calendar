@@ -59,12 +59,14 @@ var template = {
             return "";
         }
         var text = event.location || "🗺";
-        var geoUrl;
+        var geoUrl = event.location;
+        /*
         if (event.geo) {
             geoUrl = "https://www.openstreetmap.org/?mlon=" + event.geo.lon + "&mlat=" + event.geo.lat + "&#map=15/" + event.geo.lat + "/" + event.geo.lon;
         } else {
             geoUrl = OSM_URL + encodeURIComponent(event.location);
         }
+        */
         return makeLink(geoUrl, text);
     },
     "debug": function(event) {
