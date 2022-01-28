@@ -3,7 +3,7 @@
     "title": "SECUSO Research Seminar",
     "css": ".event, .dhx_cal_tab.active, .dhx_cal_tab.active:hover {background-color: #00876C;} .dhx_month_head, .dhx_cal_tab, .dhx_cal_today_button {color: #00876C;} .dhx_cal_tab, .dhx_cal_tab.active {border-color: #00876C;}\n.dhx_after .dhx_month_body, .dhx_before .dhx_month_body, .dhx_after .dhx_month_head, .dhx_before .dhx_month_head { background-color: #f7f7f7; }\n.dhx_cal_qi_controls {\n    display: none;\n}\n\n.dhtmlXTooltip {\n    display: none;\n}\n\n.dhx_cal_qi_title {\n    background-color: #00876C;\n}\n\n.dhx_cal_tab, .dhx_cal_event_clear {\n    color: #00876C;\n}\n\n.active {\n    background-color: #00876C;\n    color: white;\n}\n.dhx_cal_event_clear {\n    background-color: transparent;\n}\n\n.dhx_cal_prev_button, .dhx_cal_next_button, .dhx_event_icon {\n    filter: brightness(0) saturate(100%) invert(27%) sepia(81%) saturate(3067%) hue-rotate(155deg) brightness(90%) contrast(101%);\n}\n\n.dhx_now > .dhx_month_body {\n    border-right: 1px solid black;\n    border-bottom: 1px solid black;\n}\n.dhx_now > .dhx_month_head {\n    border-right: 1px solid black;\n}",
     "target": "_blank",
-    "tab": "agenda",
+    "tab": "month",
     "tabs": [
         "month",
         "agenda"
