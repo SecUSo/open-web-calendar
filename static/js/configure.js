@@ -58,7 +58,7 @@ var template = {
           "</div>";
     },
     "details": function(event) {
-        return "<div class='details'>" + event.description + "</div>";
+        return "<div class='details'>" + event.description.replace(/\n/g, "<br />") + "</div>";
     },
     "location": function(event) {
         if (!event.location && !event.geo) {
